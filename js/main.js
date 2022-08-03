@@ -207,6 +207,7 @@ async function deletePost() {
     return;
   }
 
+// comment
   let postId = document.querySelector("#postDelete-inp").value;
   let flag = checkOwnerPost(postId);
   if (!flag) {
