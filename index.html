@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/styles.css">
+
+</head>
+<body>
+    <div class="container">
+    <!-- navbar start -->
+    <nav class="navbar bg-light">
+        <div class="container-fluid">
+
+          <a class="navbar-brand" href="#">
+            <img src="./images/Instagram_logo.svg.png" alt="" width="170" height="74" class="d-inline-block align-text-top">
+          </a>
+
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" id="postEdit-inp" placeholder="Введите id поста" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Поиск</button>
+          </form>
+
+          
+
+          <ul class="navbar__list">
+
+            <li class="navbar__list_items">
+              <button id="createPostBtn"  class="navbar_items_btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">Create post</button>
+             </li>
+             <li class="navbar__list_items">
+              <button class="navbar_items_btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Регистрация</button>
+             </li>
+            <li class="navbar__list_items">
+              <button class="navbar_items_btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop1">Войти</button></li>
+            <li class="navbar__list_items">
+              <button class="navbar_items_btn" id="logoutBtn">Выйти</button></li>
+
+            <li class="navbar__list_items" id="user__inSystem"></li>
+          </ul>
+
+        </div>
+      </nav>
+    <!-- navbar end -->
+
+    <!-- main menu start -->
+    <div class="card_container">
+       
+    </div>
+    <!-- main menu end-->
+
+    <!-- USER REGISTRATION modal window start -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Регистрация пользователя</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+        </div>
+        <div class="modal-body">
+
+          <input type="text" id="regLogin-inp" placeholder="Введите логин">
+          <br>
+          <br>
+          <input type="password" id="regPass-inp" placeholder="Введите пароль">
+          <br>
+          <br>
+          <input type="password" id="confirmPass-inp" placeholder="Подтвердите пароль">
+
+        
+        </div>
+        <div class="modal-footer">
+         
+          <button id="registerBtn" type="button" class="btn btn-pr imary"id='add-product-btn'>Создать</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- USER REGISTRATION modal window end -->
+
+
+    <!-- USER ENTERING modal window start -->
+    <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Вход в систему</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+        </div>
+        <div class="modal-body">
+
+          <input type="text" id="login-inp" placeholder="Введите логин">
+          <br>
+          <br>
+          <input type="password" id="pass-inp" placeholder="Введите пароль">
+  
+        </div>
+        <div class="modal-footer">
+         
+          <button id="loginBtn" type="button" class="btn btn-pr imary"id='add-product-btn'>Войти</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- USER ENTERING modal window end -->
+
+    <!-- POST CREATE modal window start -->
+    <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Создание поста</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+        </div>
+        <div class="modal-body">
+
+          <input type="text" id="post-inp" placeholder="Enter your description">
+          <br>
+          <br>
+          <input type="url" id="post-img-url" placeholder="Enter IMG url">
+
+        
+  
+        </div>
+        <div class="modal-footer">
+         
+          <button id="logoutBtn" type="button" class="btn btn-pr imary"id='add-product-btn' onclick="createPost()">Создать</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- POST CREATE modal window end -->
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>

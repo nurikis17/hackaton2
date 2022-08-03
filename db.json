@@ -1,0 +1,90 @@
+{
+  "posts": [
+    {
+      "title": "Freedom",
+      "user": "Nursultan",
+      "likes": 50,
+      "id": 2,
+      "url": "https://klike.net/uploads/posts/2019-05/1556708032_1.jpg",
+      "comments": 5,
+      "views": 18
+    },
+    {
+      "title": "Hello Nur",
+      "user": "Nursultan",
+      "likes": 50,
+      "url": "https://www.imgonline.com.ua/examples/bee-on-daisy.jpg",
+      "id": 3,
+      "comments": 5,
+      "views": 15
+    },
+    {
+      "title": "Flower",
+      "user": "Nursultan",
+      "likes": 0,
+      "url": "https://www.imgonline.com.ua/examples/bee-on-daisy.jpg",
+      "id": 4,
+      "comments": 4,
+      "views": 20
+    },
+    {
+      "title": "Island",
+      "user": "Nursultan",
+      "likes": 0,
+      "url": "https://bipbap.ru/wp-content/uploads/2017/04/0_7c779_5df17311_orig.jpg",
+      "id": 5,
+      "comments": 10,
+      "views": 20
+    }
+  ],
+  "users": [
+    {
+      "name": "nurshat",
+      "password": "123",
+      "isLogin": false,
+      "id": 1
+    },
+    {
+      "name": "alex",
+      "password": "123",
+      "isLogin": false,
+      "id": 2
+    },
+    {
+      "name": "aaaa",
+      "password": "111",
+      "isLogin": false,
+      "id": 3
+    },
+    {
+      "name": "alexandro",
+      "password": "123",
+      "isLogin": false,
+      "id": 4
+    },
+    {
+      "name": "maks",
+      "password": "321",
+      "isLogin": false,
+      "id": 5
+    },
+    {
+      "name": "nursultan",
+      "password": "12345",
+      "isLogin": false,
+      "id": 6
+    },
+    {
+      "name": "Nursultan",
+      "password": "12345",
+      "isLogin": true,
+      "id": 7
+    },
+    {
+      "name": "Nur",
+      "password": "1234",
+      "isLogin": false,
+      "id": 8
+    }
+  ]
+}
