@@ -149,10 +149,6 @@ async function getPostObj(id) {
   <li class="list-group-item"> <img class="list-group-item_img" src="./images/views icon.jpeg" width="20" height="20" alt="">${data.views}</li>
   </ul>
 
-  <div class="card-body">
-  <a href="#" class="card-link">Удалить</a>
-  <a href="#" class="card-link">Редактировать</a>
-  </div>
 
 </div>`;
 }
@@ -183,7 +179,6 @@ async function createPost() {
     let data = await res.json();
     let findUser = data.forEach((item) => {
       if (item.user === inSystem) {
-        if(item.id === item.length -1)
         getPostObj(item.id);
       }
 })
@@ -201,15 +196,15 @@ async function checkOwnerPost(id) {
   return data.user === inSystem;
 }
 
+
 async function deletePost() {
   if (!inSystem) {
     alert("only authirized users can create posts");
     return;
   }
 
-// comment
-  let postId = document.querySelector("#postDelete-inp").value;
-  let flag = checkOwnerPost(postId);
+  let postId = document.querySelector(".change__post_inp").value;
+  let flag = await checkOwnerPost(postId);
   if (!flag) {
     alert(
       "there is no post with this id or you are not the author of such a post"
@@ -221,11 +216,7 @@ async function deletePost() {
     method: "DELETE",
   });
   alert("Post successfully Deleted");
-
 }
-let deleteBtn = document.querySelector("#deletePostBtn");
-deleteBtn.addEventListener("click", deletePost);
-
 
 
 
@@ -252,7 +243,7 @@ async function updatePost() {
     return;
   }
 
-  let newPostData = document.querySelector("#editedPost-inp");
+  let newPostData = document.querySelector(".change__post_inp");
   await fetch(`http://localhost:8000/posts/${postId}`, {
     method: "PATCH",
     body: JSON.stringify({ title: newPostData.value }),
@@ -262,4 +253,3 @@ async function updatePost() {
   });
   alert("Post successfully updated");
 }
-editPostBtn.addEventListener("click", updatePost);

@@ -19,17 +19,14 @@
             <img src="./images/Instagram_logo.svg.png" alt="" width="170" height="74" class="d-inline-block align-text-top">
           </a>
 
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" id="postEdit-inp" placeholder="Введите id поста" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Поиск</button>
-          </form>
-
           
 
           <ul class="navbar__list">
-
             <li class="navbar__list_items">
-              <button id="createPostBtn"  class="navbar_items_btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">Create post</button>
+              <button id="createPostBtn"  class="navbar_items_btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop3">Изменить пост</button>
+             </li>
+            <li class="navbar__list_items">
+              <button id="createPostBtn"  class="navbar_items_btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">Создать пост</button>
              </li>
              <li class="navbar__list_items">
               <button class="navbar_items_btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Регистрация</button>
@@ -137,7 +134,31 @@
   </div>
     <!-- POST CREATE modal window end -->
 
+<!-- DEL/Update modal window start -->
+<div class="modal fade" id="staticBackdrop3" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+aria-labelledby="staticBackdropLabel" aria-hidden="true">
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="staticBackdropLabel">Изменить пост</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+    </div>
+    <div class="modal-body">
 
+     
+      <input type="number" class="change__post_inp">
+
+    </div>
+    <div class="modal-footer">
+     
+      <button id="logoutBtn" type="button" class="btn btn-pr imary"id='add-product-btn' onclick="deletePost()">Удалить</button>
+      <button id="logoutBtn" type="button" class="btn btn-pr imary"id='add-product-btn' onclick="updatePost()">Изменить</button>
+
+    </div>
+  </div>
+</div>
+</div>
+<!-- POST CREATE modal window end -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
     <script src="./js/main.js"></script>
